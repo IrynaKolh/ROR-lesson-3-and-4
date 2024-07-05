@@ -13,15 +13,33 @@ loop do
     if answer == "too low"
         if guess >= highest
             puts "You are lying! The guess can't be too low."
-            break
+            puts "Do you want to play again? Print Y or N"
+            if gets.chomp.upcase == "Y"
+                number_guess = 0
+                lowest = 0
+                highest = 100
+                next
+            else
+                puts "Bye!"
+                break
+            end
           end
-        lowest = guess + 1
+        lowest = guess
     elsif answer == "too high"
         if guess <= lowest
             puts "You are lying! The guess can't be too high."
-            break
+            puts "Do you want to play again? Print Y or N"
+            if gets.chomp.upcase == "Y"
+                number_guess = 0
+                lowest = 0
+                highest = 100
+                next
+            else
+                puts "Bye!"
+                break
+            end
           end
-          highest = guess - 1
+          highest = guess
     elsif answer == "correct" 
         puts "I guessed your number in #{number_guess} try/tries!"
         puts "Do you want to play again? Print Y or N"
@@ -40,6 +58,15 @@ loop do
 
     if lowest >= highest
         puts "You are lying! There are no possible numbers left."
-        break
+        puts "Do you want to play again? Print Y or N"
+        if gets.chomp.upcase == "Y"
+            number_guess = 0
+            lowest = 0
+            highest = 100
+            next
+        else
+            puts "Bye!"
+            break
+        end
     end
 end

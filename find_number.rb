@@ -12,15 +12,15 @@ while true
         puts "Do you want to play again? Print Y or N"
         if gets.chomp.upcase == "Y"
             secret_number = rand(1..100)
-            number_steps = 0
+            number_guess = 0
             next
         else
             puts "Bye!"
             break
         end
     elsif number > secret_number
-        puts "Too big! Try the smaller one."
+        puts "Too big! Try a smaller one."
     else
-        puts "Too small! Try the bigger one."
+        puts "Too small! Try a bigger one."
     end
 end
