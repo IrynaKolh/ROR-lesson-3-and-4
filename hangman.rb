@@ -1,6 +1,6 @@
 def hangman(word, letters)
     result = ''
-    (word.length).times do |i|
+    word.each_char do |i|
         if letters.include?(word[i])
             result += word[i]
         else

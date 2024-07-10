@@ -9,7 +9,6 @@ while flag
     puts 'Do you want more? Y or N'
     if gets.chomp.upcase == 'N'
         puts "Bye!"
-        flag = false
-        break
+        flag = false        
     end
 end

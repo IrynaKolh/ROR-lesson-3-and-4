@@ -43,3 +43,10 @@ title_array = book_array.sort do |a, b|
   title1 <=> title2
 end
 puts title_array
+
+puts "Sorting by count"
+
+count_array = book_array.sort do |a, b|
+  a.count <=> b.count
+end
+puts count_array

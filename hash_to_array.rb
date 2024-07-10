@@ -5,7 +5,7 @@ my_hash = {}
     temp_key = gets.chomp
     puts "Enter #{i + 1} value data:"
     temp_value = gets.chomp
-    my_hash.store(temp_key, temp_value)
+    my_hash[temp_key] = temp_value
 end
 
 def hash_to_array(hash)
